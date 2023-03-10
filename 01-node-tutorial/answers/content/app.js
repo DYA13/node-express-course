@@ -1,9 +1,14 @@
-// Common JS, every file is module(by default)
-//Modules - Encapsulated Code( only share minimum)
-const names = require('./04-names')
-const sayHi  = require('./05-utils')
+const path = require('path');
+
+console.log(path.sep)
+
+const filePath = path.join('/content/','subfolder','test.txt')
+console.log(filePath)
+
+const base = path.basename(filePath)
+console.log(base)
+
+const absolute = path.resolve(__dirname,'content','subfolder','test.txt')
+console.log(absolute)
 
 
-sayHi('susan')
-sayHi(names.john)
-sayHi(names.peter)
